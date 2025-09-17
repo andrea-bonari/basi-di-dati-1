@@ -34,6 +34,14 @@ Talvolta è possibile che le informazioni in una istanza siano incomplete, in qu
 >I vincoli di integrità si distinguono in vincoli intrarelazionali e vincoli interrelazionali.
 >
 >Tra i vincoli intrarelazionali troviamo il vincolo di $n$-upla, cioè una condizione sui valori di ciascuna $n$-upla, indipendentemente dalle altre $n$-uple.
+>
+>I vincoli intrarelazionali più importanti sono:
+>- `not null`
+>- `unique`
+>- `primary key`
+>- `check`
+>
+>Mentre il vincolo interrelazionale più importante è `foreign key`.
 
 >[!tip] Chiavi
 >Le chiavi sono un sottoinsieme degli attributi dello schema che hanno la proprietà di unicità (non esistono due $n$-uple con chiave uguale) e minimalità (sottraendo un qualunque attributo alla chiave si perde la proprietà di unicità).
@@ -41,4 +49,17 @@ Talvolta è possibile che le informazioni in una istanza siano incomplete, in qu
 >Se il sottoinsieme non è minimo si parla di superchiave. In questo caso una delle chiavi è detta primaria mentre le altre sono secondarie.
 >
 >In presenza di valori nulli, i valori degli attributi che formano la chiave non permettono di identificare le $n$-uple come desiderato, per questo la presenza di valori nulli nelle chiavi deve essere limitate.
+>
+>Se ci sono informazioni in relazioni diverse correlate attraverso valori comuni, in particolare i valori delle chiavi, si può creare un vincolo di integrità referenziale fra un insieme di attributi $X$ di una relazione $R_{1}$ e un'altra relazione $R_{2}$ impone ai valori su $X$ di una ciascuna $n$-upla dell'istanza $R_{1}$ di comparire come valori della chiave dell'istanza di $R_{2}$. Questa è detta Foreign Key.
+
+Una tabella consiste di un insieme ordinato di attributi ed un insieme di vincoli. Per crearlo si usa il comando:
+
+```sql
+CREATE TABLE Studente (
+	Matr character(6) primary key,
+	Nome varchar(30) not null,
+	Città varchar(20),
+	CDip char(3)
+)
+```
 

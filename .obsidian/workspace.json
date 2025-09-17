@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Basi di dati/DBMS.md",
+                "file": "Basi di dati/Interrogazioni delle basi di dati.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "DBMS"
+              "title": "Interrogazioni delle basi di dati"
             }
           }
         ],
@@ -184,8 +184,9 @@
   },
   "active": "52d57da474cbf2c6",
   "lastOpenFiles": [
-    "index.md",
     "Basi di dati/DBMS.md",
+    "Basi di dati/Interrogazioni delle basi di dati.md",
+    "index.md",
     "temp/09-19.md",
     "Introduzione al corso.md",
     "Basi di dati",
@@ -211,7 +212,6 @@
     "Sistemi differenziali lineari/Sistemi differenziali lineari.md",
     "Sistemi differenziali lineari/Sistemi differenziali lineari omogenei.md",
     "Sistemi differenziali lineari/Sistemi differenziali lineari non omogenei.md",
-    "Funzioni a più variabili/Limiti e continuità di funzioni a più variabili.md",
     "data/Pasted image 20241216183056.png",
     "data/Pasted image 20241216183104.png",
     "data/Pasted image 20241216183045.png",

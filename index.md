@@ -2,3 +2,4 @@ Il corso introduce il sistema informativo in azienda, le caratteristiche dei DBM
 
 1. [[Introduzione al corso]]
 2. [[DBMS]]
+	1. [[Interrogazioni delle basi di dati]]

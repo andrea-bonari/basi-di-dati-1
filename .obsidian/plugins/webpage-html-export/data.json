@@ -9,11 +9,7 @@
     "inlineHTML": false,
     "exportPath": "/output",
     "filesToExport": [
-      "Equazioni differenziali",
-      "Funzioni a più variabili",
-      "Serie di funzioni",
-      "Sistemi differenziali lineari",
-      "Spazio n-dimensionale",
+      "Basi di dati",
       "index.md",
       "Introduzione al corso.md"
     ],

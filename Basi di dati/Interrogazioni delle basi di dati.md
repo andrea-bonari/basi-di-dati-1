@@ -26,3 +26,33 @@ Anche in questo caso esiste il semi-join naturale.
 >[!tip] Assegnamento e ridenominazione
 >L'assegnamento è un operazione utilizzata per dare un nome al risultato di un'espressione algebrica, non fa parte delle operazioni algebriche: $$\text{Assegnazione}=\sigma_{\text{Attr='Val'}}\text{Tabella}$$
 >La ridenominazione permette di generare una tabella in cui un attributo ha nomi diversi, anche questa non fa parte delle operazioni algebriche: $$\rho_{\text{Rinominato }\leftarrow\text{ Attributo}}\text{Tabella}$$
+
+>[!tip] Rappresentazione delle espressioni tramite alberi
+>Ogni espressione dell'algebra relazionale può essere rappresentata in modo grafico da un albero. Rappresenta l'ordine di valutazione degli operandi, dove ogni operatore corrisponde a un nodo.
+
+>[!tip] Ottimizzazione di query
+>Esistono delle equivalenze tra query, tra cui:
+>- Eliminazione dei prodotti cartesiani. Se $p$ è una congiunzione di predicati del tipo $\text{Attr comp Attr}$, allora: $$\sigma_{p}\space R\times S\equiv R\Join_{p} S$$
+>- Push della selezione rispetto al join. Se $p$ è un predicato che si applica ai soli attributi di $R$, allora: $$\sigma_{p} R\Join_{Q} S\equiv (\sigma_{p}\space R)\Join_{Q} S$$
+>- Push della proiezione rispetto al join. Definendo $\text{JR}$ e $\text{JS}$ come gli attributi di $R$ e $S$ necessari a valutare $Q$, e definendo $\text{LR}=L-\text{schema}(S)+\text{JR}$ e $\text{LS}=L-\text{schema}(R)+\text{JS}$, allora: $$\Pi_{L}\space R\Join_{Q} S\equiv \Pi_{L}\space (\Pi_{\text{LR}}\space R)\Join_{Q}(\Pi_{\text{LS}}\space S)$$
+>- Idempotenza della selezione. Si ha che per $p= p_{1}\land p_{2}$: $$\sigma_{p} \space R\equiv \sigma_{p_{1}}\sigma_{p_{2}}\space R$$
+>- Idempotenza della proiezione. Si ha che per $L_{1}=L$ e $L\subseteq L_{2}$: $$\Pi_{L}\space R\equiv \Pi_{L_{1}}\Pi_{L_{2}}\space R$$
+>- Push della selezione rispetto all'unione. Si ha che: $$\sigma_{p}\space R\cup S\equiv (\sigma_{p}\space R)\cup(\sigma_{p}\space S)$$
+>- Push della selezione rispetto alla differenza. Si ha che: $$\sigma_{p}\space R-S\equiv (\sigma_{p}\space R)-(\sigma_{p}\space S)$$
+>- Push della proiezione rispetto all'unione. Si ha che: $$\Pi_{L}\space R\cup S\equiv (\Pi_{L}\space R)\cup(\Pi_{L}\space S)$$
+>- Commutazione di join e unione. Si ha che: $$(R_{1}\cup R_{2})\Join(S_{1}\cup S_{2})\equiv (R_{1}\Join S_{1})\cup(R_{1}\Join S_{2})\cup(R_{2}\Join S_{1})\cup(R_{2}\Join S_{2})$$
+>
+>Oltre a queste esistono delle formule come: $$\begin{align*}
+&R\cap R= R\\
+&R\cup R= R\qquad &\sigma_{P}\space \emptyset=\emptyset\\
+&R-R=\emptyset\qquad &\Pi_{L}\space \emptyset =\emptyset\\
+\\
+&R\cap (\sigma_{P}\space R)=\sigma_{P}\space R\qquad &R\cup\emptyset=R\\
+&R\cup (\sigma_{P}\space R)=R\qquad &R-\emptyset=R\\
+&R-(\sigma_{P}\space R)=\sigma_{\lnot P}\space R\qquad &\emptyset-R=\emptyset\\
+&&R\cap\emptyset =\emptyset\\
+&\sigma_{P_{1}}\space R\cap \sigma_{P_{2}}\space R=\sigma_{P_{1}\land P_{2}}\space R\\
+&\sigma_{P_{1}}\space R\cup \sigma_{P_{2}}\space R=\sigma_{P_{1}\lor P_{2}}\space R\qquad&R\times\emptyset=\emptyset\\
+&\sigma_{P_{1}}\space R- \sigma_{P_{2}}\space R=\sigma_{P_{1}\land \lnot P_{2}}\space R\qquad &R\Join \emptyset=\emptyset
+>\end{align*}$$
+>Informalmente per ottimizzare algebricamente si minimizza la dimensione dei risultati intermedi utilizzando dove possibile le trasformazioni di push, e utilizzando le trasformazioni di idempotenza per generare nuove selezioni e proiezioni.

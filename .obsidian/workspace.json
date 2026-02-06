@@ -11,14 +11,12 @@
             "id": "f99239934708b741",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Basi di dati/Modello ER/Normalizzazione.md",
-                "mode": "source",
-                "source": false
+                "file": "data/Pasted image 20260206170821.png"
               },
-              "icon": "lucide-file",
-              "title": "Normalizzazione"
+              "icon": "lucide-image",
+              "title": "Pasted image 20260206170821"
             }
           }
         ]
@@ -169,21 +167,22 @@
   },
   "active": "f99239934708b741",
   "lastOpenFiles": [
-    "index.md",
-    "Basi di dati/Modello ER/Normalizzazione.md",
-    "Basi di dati/Modello ER/Progettazione fisica.md",
-    "data/Pasted image 20260206170821.png",
     "data/Pasted image 20260206170628.png",
     "data/Pasted image 20260206170523.png",
+    "data/Pasted image 20260206170821.png",
     "data/Pasted image 20260206165926.png",
     "data/Pasted image 20260206165502.png",
-    "Basi di dati/Modello ER/Progettazione logica.md",
     "data/Pasted image 20260206164023.png",
-    "Basi di dati/Modello ER/Progettazione concettuale.md",
     "data/Pasted image 20260206162708.png",
     "data/Pasted image 20260206162314.png",
     "data/Pasted image 20260206162208.png",
     "data/Pasted image 20260206155607.png",
+    "data/Pasted image 20260206155254.png",
+    "Basi di dati/Modello ER/Progettazione concettuale.md",
+    "Basi di dati/Modello ER/Normalizzazione.md",
+    "index.md",
+    "Basi di dati/Modello ER/Progettazione fisica.md",
+    "Basi di dati/Modello ER/Progettazione logica.md",
     "Basi di dati/DBMS Fisico.md",
     "Basi di dati/Linguaggi di Query/JDBC.md",
     "Basi di dati/Linguaggi di Query/SQL.md",

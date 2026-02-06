@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "9ce5656b92d7368d",
+        "id": "2a583216c624c376",
         "type": "tabs",
         "children": [
           {
-            "id": "f99239934708b741",
+            "id": "9a10db5db43117be",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "data/Pasted image 20260206170821.png"
+                "file": "Basi di dati/Modello ER/Normalizzazione.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20260206170821"
+              "icon": "lucide-file",
+              "title": "Normalizzazione"
             }
           }
         ]
@@ -165,11 +167,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f99239934708b741",
+  "active": "9a10db5db43117be",
   "lastOpenFiles": [
+    "Basi di dati/Modello ER/Progettazione concettuale.md",
+    "Basi di dati/Modello ER/Progettazione fisica.md",
+    "data/Pasted image 20260206170821.png",
     "data/Pasted image 20260206170628.png",
     "data/Pasted image 20260206170523.png",
-    "data/Pasted image 20260206170821.png",
     "data/Pasted image 20260206165926.png",
     "data/Pasted image 20260206165502.png",
     "data/Pasted image 20260206164023.png",
@@ -177,11 +181,8 @@
     "data/Pasted image 20260206162314.png",
     "data/Pasted image 20260206162208.png",
     "data/Pasted image 20260206155607.png",
-    "data/Pasted image 20260206155254.png",
-    "Basi di dati/Modello ER/Progettazione concettuale.md",
     "Basi di dati/Modello ER/Normalizzazione.md",
     "index.md",
-    "Basi di dati/Modello ER/Progettazione fisica.md",
     "Basi di dati/Modello ER/Progettazione logica.md",
     "Basi di dati/DBMS Fisico.md",
     "Basi di dati/Linguaggi di Query/JDBC.md",
